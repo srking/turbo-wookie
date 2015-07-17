@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "MPTweakInline.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic) BOOL mixpanelTweaksActive;
 
 @end
 
@@ -16,7 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    MPTweakBind(self, mixpanelTweaksActive, @"Tweaks Active", NO);
     return YES;
 }
 
